@@ -1,0 +1,4 @@
+*.~*
+~*.*
+*.out
+.atom-build-oracle.json
