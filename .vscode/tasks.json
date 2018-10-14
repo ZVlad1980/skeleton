@@ -2,18 +2,12 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Compile",
+            "label": "RunSQL",
             "type": "shell",
-            "command": "./_run_sqlplus.sh",
-            "windows": {
-                "command": "_run_sqlplus.bat"
-            },
-            "osx": {
-                "command": "./_run_sqlplus.sh"
-            },
+            "command": "./scripts/test.sh",
             "args": [
-                "node/node@node",
-                "@\"${file}\""
+                "oe/oe@node",
+                "\"${file}\""
             ],
             "group": {
                 "kind": "build",
@@ -22,24 +16,6 @@
             "presentation": {
                 "reveal": "always",
                 "panel": "new"
-            },
-            "problemMatcher": {
-                "owner": "plsql",
-                "fileLocation": [
-                    "relative",
-                    "${fileDirname}"
-                ],
-                "pattern": [
-                    {
-                        "regexp": "(.*) (\\d*)/(\\d*) (.*?) (.*)",
-                        "severity": 1,
-                        "line": 2,
-                        "column": 3,
-                        "file": 4,
-                        "message": 5,
-                        "loop": true
-                    }
-                ]
             }
         }
     ]
